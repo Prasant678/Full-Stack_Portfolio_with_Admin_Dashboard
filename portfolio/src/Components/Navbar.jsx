@@ -24,7 +24,7 @@ const Navbar = () => {
 
     const Container = (delay) => ({
         hidden: { x: -100, opacity: 0 },
-        visible: { x: 0, opacity: 1, transition: { duration: 0.7, delay: delay }}
+        visible: { x: 0, opacity: 1, transition: { duration: 0.7, delay: delay } }
     })
     return (
         <div className='flex lg:mb-5 mb-4 items-center justify-between lg:py-4 py-7'>
@@ -33,13 +33,72 @@ const Navbar = () => {
             </div>
             <div className='lg:flex items-center gap-5 rounded px-3 py-1 hidden w'>
                 <ul className='flex items-center justify-center gap-5'>
-                    {menu === "about" ? <motion.li initial={{ y: 30, opacity: 0}} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.7, delay: 0.1}} className='bg-gradient-to-r from-indigo-500  to-indigo-600 px-2 py-0.5 rounded-lg text-black font-medium'><AnchorLink href="#about"><p onClick={() => setMenu("about")}>About</p></AnchorLink></motion.li> : <motion.li initial={{ y: 30, opacity: 0}} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.7, delay: 0.1}}><AnchorLink href="#about"><p onClick={() => setMenu("about")}>About</p></AnchorLink></motion.li>}
-                    {menu === "skills" ? <motion.li initial={{ y: 30, opacity: 0}} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.7, delay: 0.2}} className='bg-gradient-to-r from-indigo-500  to-indigo-600 px-2 py-0.5 rounded-lg text-black font-medium'><AnchorLink href="#skills"><p onClick={() => setMenu("skills")}>Skills</p></AnchorLink></motion.li> : <motion.li initial={{ y: 30, opacity: 0}} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.7, delay: 0.2}}><AnchorLink href="#skills"><p onClick={() => setMenu("skills")}>Skills</p></AnchorLink></motion.li>}
-                    {menu === "timeline" ? <motion.li initial={{ y: 30, opacity: 0}} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.7, delay: 0.3}} className='bg-gradient-to-r from-indigo-500  to-indigo-600 px-2 py-0.5 rounded-lg text-black font-medium'><AnchorLink href="#timeline"><p onClick={() => setMenu("timeline")}>Timeline</p></AnchorLink></motion.li> : <motion.li initial={{ y: 30, opacity: 0}} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.7, delay: 0.3}}><AnchorLink href="#timeline"><p onClick={() => setMenu("timeline")}>Timeline</p></AnchorLink></motion.li>}
-                    {menu === "projects" ? <motion.li initial={{ y: 30, opacity: 0}} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.7, delay: 0.4}} className='bg-gradient-to-r from-indigo-500  to-indigo-600 px-2 py-0.5 rounded-lg text-black font-medium'><AnchorLink href="#projects"><p onClick={() => setMenu("projects")}>Projects</p></AnchorLink></motion.li> : <motion.li initial={{ y: 30, opacity: 0}} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.7, delay: 0.4}}><AnchorLink href="#projects"><p onClick={() => setMenu("projects")}>Projects</p></AnchorLink></motion.li>}
+                    {menu === "about" ?
+                        <motion.li initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.7, delay: 0.1 }} className='bg-linear-to-r from-slate-800 to-slate-800 px-2 py-0.5 rounded-md font-medium tracking-wider border border-slate-700'>
+                            <AnchorLink href="#about">
+                                <p onClick={() => setMenu("about")}>
+                                    About
+                                </p>
+                            </AnchorLink>
+                        </motion.li>
+                        :
+                        <motion.li initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.7, delay: 0.1 }}>
+                            <AnchorLink href="#about">
+                                <p onClick={() => setMenu("about")} className='tracking-wider'>
+                                    About
+                                </p>
+                            </AnchorLink></motion.li>}
+                    {menu === "skills" ?
+                        <motion.li initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.7, delay: 0.2 }} className='bg-linear-to-r from-slate-800 to-slate-800 px-2 py-0.5 rounded-md font-medium tracking-wider border border-slate-700'>
+                            <AnchorLink href="#skills">
+                                <p onClick={() => setMenu("skills")}>
+                                    Skills
+                                </p>
+                            </AnchorLink>
+                        </motion.li>
+                        :
+                        <motion.li initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.7, delay: 0.2 }}>
+                            <AnchorLink href="#skills">
+                                <p onClick={() => setMenu("skills")} className='tracking-wider'>
+                                    Skills
+                                </p>
+                            </AnchorLink>
+                        </motion.li>}
+                    {menu === "timeline" ?
+                        <motion.li initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.7, delay: 0.3 }} className='bg-linear-to-r from-slate-800 to-slate-800 px-2 py-0.5 rounded-md font-medium tracking-wider border border-slate-700'>
+                            <AnchorLink href="#timeline">
+                                <p onClick={() => setMenu("timeline")}>
+                                    Timeline
+                                </p>
+                            </AnchorLink>
+                        </motion.li>
+                        :
+                        <motion.li initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.7, delay: 0.3 }}>
+                            <AnchorLink href="#timeline">
+                                <p onClick={() => setMenu("timeline")} className='tracking-wider'>
+                                    Timeline
+                                </p>
+                            </AnchorLink>
+                        </motion.li>}
+                    {menu === "projects" ?
+                        <motion.li initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.7, delay: 0.4 }} className='bg-linear-to-r from-slate-800 to-slate-800 px-2 py-0.5 rounded-md font-medium tracking-wider border border-slate-700'>
+                            <AnchorLink href="#projects">
+                                <p onClick={() => setMenu("projects")}>
+                                    Projects
+                                </p>
+                            </AnchorLink>
+                        </motion.li>
+                        :
+                        <motion.li initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.7, delay: 0.4 }}>
+                            <AnchorLink href="#projects">
+                                <p onClick={() => setMenu("projects")} className='tracking-wider'>
+                                    Projects
+                                </p>
+                            </AnchorLink>
+                        </motion.li>}
                 </ul>
             </div>
-            <motion.div initial={{ x: 100, opacity: 0}} animate="visible" variants={Container(0.1)} className='flex gap-4 items-center justify-center text-2xl text-white'>
+            <motion.div initial={{ x: 100, opacity: 0 }} animate="visible" variants={Container(0.1)} className='flex gap-4 items-center justify-center text-2xl text-white'>
                 <Link to={user.linkedInURL} target='_blank'><FaLinkedinIn className='cursor-pointer' /></Link>
                 <Link to={user.githubURL} target='_blank'><FaGithub className='cursor-pointer' /></Link>
                 <Link to={user.instagramURL} target='_blank'><FaInstagram className='cursor-pointer' /></Link>

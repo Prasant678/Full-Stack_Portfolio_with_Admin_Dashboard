@@ -43,24 +43,24 @@ const Contact = () => {
     return (
         <div id='contact' className='lg:px-10 pb-10 mb-10'>
             <div className="flex items-center justify-center lg:pb-7 lg:pt-8">
-                <motion.h1 initial={{ y: -50, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }} className='text-4xl font-thin text-neutral-400 lg:pt-4 pt-8 lg:pb-1 pb-4'>Get in Touch</motion.h1>
+                <motion.h1 initial={{ y: -50, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }} className='text-4xl font-thin text-neutral-400 lg:pt-4 pt-8 lg:pb-1 pb-4 tracking-wider'>Get in Touch</motion.h1>
             </div>
             <div className="lg:flex lg:items-center lg:justify-between lg:gap-10">
                 <div className="lg:py-10 py-5 lg:px-6 w-full lg:w-1/2">
-                    <motion.h1 whileInView={{ opacity: 1, x: 0 }} initial={{ x: -100, opacity: 0 }} transition={{ duration: 0.6, delay: 0.5 }} className='text-4xl font-semibold mb-5 bg-gradient-to-b from-[#06b6d4] via-[#2563eb] to-[#6366f1] bg-clip-text text-transparent'>LET'S TALK</motion.h1>
-                    <motion.p whileInView={{ opacity: 1, x: 0 }} initial={{ x: -100, opacity: 0 }} transition={{ duration: 0.8, delay: 0.5 }} className='text-lg lg:font-thin font-extralight mb-4'>I'm currently avaliable to take on new projects, so feel free to send me a message about anything that you want me to work on. You can contact anytime.</motion.p>
+                    <motion.h1 whileInView={{ opacity: 1, x: 0 }} initial={{ x: -100, opacity: 0 }} transition={{ duration: 0.6, delay: 0.5 }} className='text-4xl font-semibold mb-5 bg-gradient-to-b from-[#06b6d4] via-[#2563eb] to-[#6366f1] bg-clip-text text-transparent tracking-wide'>LET'S TALK</motion.h1>
+                    <motion.p whileInView={{ opacity: 1, x: 0 }} initial={{ x: -100, opacity: 0 }} transition={{ duration: 0.8, delay: 0.5 }} className='text-md lg:font-thin font-extralight mb-4 tracking-wide'>I'm currently available and open to new opportunities. If you have a project in mind or just want to connect, feel free to reach out anytime — I'd love to hear from you.</motion.p>
                     <div className="">
                         <motion.div whileInView={{ opacity: 1, x: 0 }} initial={{ x: -100, opacity: 0 }} transition={{ duration: 1, delay: 0.5 }} className="flex items-center gap-2.5 mb-3">
                             <IoIosMail className='text-xl mt-1 text-sky-600' />
-                            <p className='text-[16px] font-semibold text-neutral-400'>prasantrao917@gmail.com</p>
+                            <p className='text-[15px] font-semibold text-neutral-400 tracking-wide'>prasantrao917@gmail.com</p>
                         </motion.div>
                         <motion.div whileInView={{ opacity: 1, x: 0 }} initial={{ x: -100, opacity: 0 }} transition={{ duration: 1.2, delay: 0.5 }} className="flex items-center gap-2.5 mb-3">
                             <IoIosCall className='text-xl text-green-600' />
-                            <p className='text-[16px] font-semibold text-neutral-400'>+91-9692858292</p>
+                            <p className='text-[15px] font-semibold text-neutral-400 tracking-wide'>+91-9692858292</p>
                         </motion.div>
                         <motion.div whileInView={{ opacity: 1, x: 0 }} initial={{ x: -100, opacity: 0 }} transition={{ duration: 1.4, delay: 0.5 }} className="flex items-center gap-2.5 mb-3">
                             <FaLocationDot className='text-xl text-red-600' />
-                            <p className='text-[16px] font-semibold text-neutral-400'>Rourkela, Odisha</p>
+                            <p className='text-[15px] font-semibold text-neutral-400 tracking-wide'>Bengaluru, India</p>
                         </motion.div>
                     </div>
                 </div>
@@ -160,7 +160,7 @@ const Contact = () => {
                         />
                     </motion.div>
                     {!loading ? (
-                        <motion.button whileInView={{ opacity: 1, x: 0 }} initial={{ x: 100, opacity: 0 }} transition={{ duration: 0.7, delay: 0.5 }} type='submit' className='lg:w-125 py-2 px-4 bg-gradient-to-r from-indigo-500 to-blue-500 rounded text-black font-semibold hover:bg-gradient-to-br'>Send Message</motion.button>
+                        <motion.button whileInView={{ opacity: 1, x: 0 }} initial={{ x: 100, opacity: 0 }} transition={{ duration: 0.7, delay: 0.5 }} type='submit' className='lg:w-125 py-2 px-4 bg-gradient-to-r from-indigo-500 to-blue-500 rounded text-black font-semibold hover:bg-gradient-to-br tracking-wide'>Send Message</motion.button>
                     ) : (
                         <div>
                             <img className='fixed top-0 left-0 z-40 w-[100vw] h-[100vh] object-none bg-[#1b1b1bb3]' src="Pulse@1x-1.0s-200px-200px.gif" alt="" />

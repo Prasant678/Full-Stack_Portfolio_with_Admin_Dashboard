@@ -17,7 +17,7 @@ const Technologies = () => {
     }, [])
     return (
         <div className='border-b lg:border-neutral-900 border-neutral-800 pb-20' id='skills'>
-            <motion.h1 initial={{ y: -50, opacity: 0}} whileInView={{ y: 0, opacity: 1}} transition={{ duration: 0.5}} className='lg:mt-16 mt-12 lg:mb-18 mb-14 text-center text-4xl font-thin text-neutral-400'>Technologies</motion.h1>
+            <motion.h1 initial={{ y: -50, opacity: 0}} whileInView={{ y: 0, opacity: 1}} transition={{ duration: 0.5}} className='lg:mt-16 mt-12 lg:mb-18 mb-14 text-center text-4xl font-thin text-neutral-400 tracking-wider'>Technologies</motion.h1>
             <motion.div initial={{ x: -100, opacity: 0}} whileInView={{ x: 0, opacity: 1}} transition={{ duration: 0.5}} className="flex flex-wrap items-center justify-center gap-4 lg:mx-60">
                     {skills && skills.map((element, index) => {
                         return (

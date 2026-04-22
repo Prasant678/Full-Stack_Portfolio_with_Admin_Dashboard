@@ -88,12 +88,12 @@ const Project = () => {
                 </div>
                 <div className="">
                     <div className="my-3">
-                        <p className='text-xl font-thin lg:mb-3 mb-2'>Description :</p>
-                        <p className='mb-4 text-neutral-400'>{mainDesc}</p>
+                        <p className='text-xl font-thin lg:mb-3 mb-2 tracking-wider'>Description :</p>
+                        <p className='mb-4 text-neutral-400 tracking-wide'>{mainDesc}</p>
                         {descPoints.length > 0 && (
                             <ul className="pl-0 space-y-1">
                                 {descPoints.map((item, index) => (
-                                    <li key={index} className="flex items-start text-neutral-400">
+                                    <li key={index} className="flex items-start text-neutral-400 tracking-wide">
                                         <span className="text-[#00c0c0] mr-1.5 my-[-4px] text-4xl mt-[-8px]">•</span>
                                         {item.trim()}
                                     </li>
@@ -102,25 +102,25 @@ const Project = () => {
                         )}
                     </div>
                     <div className="my-3">
-                        <p className='text-xl font-thin mb-3'>Technologies :</p>
+                        <p className='text-xl font-thin mb-3 tracking-wider'>Technologies :</p>
                         <ul className='lg:flex flex flex-wrap lg:items-center lg:gap-4 gap-2.5 w-full'>
                             {technologiesList.map((item, index) => (
-                                <li className="lg:mb-0 mb-1 bg-neutral-800 py-1 px-2 rounded text-[#E4A11B]" key={index}>{item}</li>
+                                <li className="lg:mb-0 mb-1 bg-neutral-800 py-1 px-2 rounded text-[#E4A11B] tracking-wide" key={index}>{item}</li>
                             ))}
                         </ul>
                     </div>
                     <div className="my-3">
-                        <h4 className='text-xl font-thin mb-2'>Stack :</h4>
-                        <p className='font-medium'>{stack}</p>
+                        <h4 className='text-xl font-thin mb-2 tracking-wider'>Stack :</h4>
+                        <p className='font-medium tracking-wider'>{stack}</p>
                     </div>
                     <div className="my-3">
-                        <h4 className='text-xl font-thin mb-2'>Deployed :</h4>
-                        <p className='font-medium'>{deployed}</p>
+                        <h4 className='text-xl font-thin mb-2 tracking-wider'>Deployed :</h4>
+                        <p className='font-medium tracking-wider'>{deployed}</p>
                     </div>
                     <div className="my-3">
-                        <p className='text-xl font-thin mb-2'>Github Repository Link :</p>
+                        <p className='text-xl font-thin mb-2 tracking-wider'>Github Repository Link :</p>
                         <Link
-                            className='text-[#3B71CA] font-medium break-all underline'
+                            className='text-[#3B71CA] font-medium break-all underline tracking-wide'
                             target="_blank"
                             to={gitRepoLink}
                         >
@@ -128,9 +128,9 @@ const Project = () => {
                         </Link>
                     </div>
                     <div className="my-3 pb-10">
-                        <p className='text-xl font-thin mb-2'>Project Link :</p>
+                        <p className='text-xl font-thin mb-2 tracking-wider'>Project Link :</p>
                         <Link
-                            className='text-[#3B71CA] font-medium break-all underline'
+                            className='text-[#3B71CA] font-medium break-all underline tracking-wide'
                             target="_blank"
                             to={projectLink}
                         >

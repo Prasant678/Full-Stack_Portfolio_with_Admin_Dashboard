@@ -60,19 +60,19 @@ const Hero = () => {
             <div className='flex flex-wrap'>
                 <div className='w-full lg:w-1/2'>
                     <div className='flex flex-col items-center lg:items-start'>
-                        <motion.h1 initial="hidden" animate="visible" variants={Container(0)} className='pb-10 text-6xl font-thin tracking-tight lg:mt-12 mt-16 lg:text-7xl'>G Prasant</motion.h1>
-                        <motion.span initial="hidden" animate="visible" variants={Container(0.5)} className='bg-gradient-to-br from-green-400 to-blue-600 bg-clip-text text-3xl text-transparent text-center'><Typewriter words={["FULL STACK DEVELOPER", "FRONTEND REACT DEVELOPER", "BACKEND NODE/JAVA DEVELOPER"]} loop={50} cursor typeSpeed={120} deleteSpeed={120} delaySpeed={100} /></motion.span>
-                        <motion.p initial="hidden" animate="visible" variants={Container(1)} className='my-2 max-w-xl py-6 font-light text-neutral-300'>I’m a Full Stack Developer who loves turning ideas into dynamic, user-friendly web applications. With expertise in both front-end and back-end development, I create seamless, scalable digital experiences. I’m always learning, experimenting, and eager to bring innovative solutions to life.</motion.p>
+                        <motion.h1 initial="hidden" animate="visible" variants={Container(0)} className='pb-10 text-6xl font-thin tracking-tight lg:mt-20 mt-16 lg:text-7xl'>G Prasant</motion.h1>
+                        <motion.span initial="hidden" animate="visible" variants={Container(0.5)} className='bg-gradient-to-br from-green-400 to-blue-600 bg-clip-text text-3xl text-transparent text-center'><Typewriter words={["FULL STACK DEVELOPER", "MERN STACK DEVELOPER", "REACT DEVELOPER"]} loop={50} cursor typeSpeed={110} deleteSpeed={110} delaySpeed={1000} /></motion.span>
+                        <motion.p initial="hidden" animate="visible" variants={Container(1)} className='my-2 max-w-xl py-6 font-light text-neutral-300 tracking-wide'>I'm G Prasant, a Full-Stack Developer who enjoys building complete web applications from scratch — handling everything from backend APIs and databases to responsive frontends and deployment.</motion.p>
                         <div className='flex items-center justify-between lg:gap-3 gap-4'>
                             <Link to={user.resume && user.resume.url} target='_blank'>
-                                <motion.button initial="hidden" animate="visible" variants={Container(1.5)} type='submit' className="w-36 py-2 px-4 bg-gradient-to-r from-indigo-500 to-blue-500 lg:rounded-md rounded-4xl text-black font-semibold hover:bg-gradient-to-br cursor-pointer">My Resume</motion.button>
+                                <motion.button initial="hidden" animate="visible" variants={Container(1.5)} type='submit' className="w-36 py-2 px-4 bg-gradient-to-r from-indigo-500 to-blue-500 lg:rounded-md rounded-4xl text-black font-semibold hover:bg-gradient-to-br cursor-pointer tracking-wide">My Resume</motion.button>
                             </Link>
-                            <motion.button initial={{ x: 100, opacity: 0 }} animate="visible" variants={Container(1.5)} onClick={() => setOpen(true)} className="w-40 py-2 px-4 bg-gradient-to-b from-[#f59e0b] via-[#f59e0b] to-[#ea580c] lg:rounded-md rounded-4xl text-black font-semibold hover:bg-gradient-to-br cursor-pointer">Connect with me
+                            <motion.button initial={{ x: 100, opacity: 0 }} animate="visible" variants={Container(1.5)} onClick={() => setOpen(true)} className="w-43 py-2 px-4 bg-gradient-to-b from-[#f59e0b] via-[#f59e0b] to-[#ea580c] lg:rounded-md rounded-4xl text-black font-semibold hover:bg-gradient-to-br cursor-pointer tracking-wide">Connect with me
                             </motion.button>
                             <Modal open={open} onClose={() => setOpen(false)}>
                                 <div onClick={(e) => e.stopPropagation()} className='lg:w-110 lg:h-90 w-85 bg-neutral-800 px-5 pb-5 lg:pt-4 pt-5 rounded-md transition-shadow'>
                                     <form className="flex flex-col w-full lg:w-1/2" onSubmit={handleSendMessage}>
-                                        <h1 className="flex justify-center items-center text-2xl text-neutral-300 font-semibold lg:w-100 pb-2">Let’s Connect</h1>
+                                        <h1 className="flex justify-center items-center text-2xl text-neutral-300 font-semibold lg:w-100 pb-2 tracking-wider">Let’s Connect</h1>
                                         <TextField
                                             label="Enter Your Name"
                                             variant="outlined"
@@ -162,7 +162,7 @@ const Hero = () => {
                                             }}
                                         />
                                         {!loading ? (
-                                            <button type='submit' className='lg:w-100 py-2 px-4 bg-gradient-to-r from-indigo-500 to-blue-500 rounded text-black font-semibold hover:bg-gradient-to-br'>Send Message</button>
+                                            <button type='submit' className='lg:w-100 py-2 px-4 bg-gradient-to-r from-indigo-500 to-blue-500 rounded text-black font-semibold hover:bg-gradient-to-br tracking-wide'>Send Message</button>
                                         ) : (
                                             <div>
                                                 <img className='fixed top-0 left-0 z-40 w-[100vw] h-[100vh] object-none bg-[#1b1b1bb3]' src="Pulse@1x-1.0s-200px-200px.gif" alt="" />

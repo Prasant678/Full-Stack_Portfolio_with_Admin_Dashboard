@@ -44,7 +44,7 @@ const Footer = () => {
             <div className="lg:flex lg:items-center lg:justify-between">
                 <div className="mx-2 my-1">
                     <img className='w-15 cursor-pointer' onClick={handleReturnToHome} src={logo} alt="" />
-                    <p className='pt-3 pb-2 lg:hidden flex'>I am a fullStack web and frontend Developer from, India.</p>
+                    <p className='pt-3 pb-2 flex tracking-wide'>Full-Stack Developer | India </p>
                 </div>
                 <div className="flex items-center gap-2 lg:my-3 my-3">
                     <motion.div whileInView={{opacity: 1, x: 0}} initial={{ x: -100, opacity: 0 }} transition={{ duration: 0.5, delay: 1 }} className="flex items-center justify-between gap-2 bg-neutral-800 rounded-4xl lg:py-2 py-1 lg:px-4 px-3.5">
@@ -52,7 +52,7 @@ const Footer = () => {
                         <input className='outline-none w-full' type="email" placeholder='Enter Your Email' value={email} onChange={(e) => setEmail(e.target.value)} />
                     </motion.div>
                     {!loading ? (
-                        <motion.button whileInView={{opacity: 1, x: 0}} initial={{ x: 100, opacity: 0 }} transition={{ duration: 0.5, delay: 1 }} type='submit' className='cursor-pointer lg:py-2 py-1 lg:px-4 px-3.5 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-4xl text-black font-semibold hover:bg-gradient-to-br' onClick={handleSendEmail}>Subscribe</motion.button>
+                        <motion.button whileInView={{opacity: 1, x: 0}} initial={{ x: 100, opacity: 0 }} transition={{ duration: 0.5, delay: 1 }} type='submit' className='cursor-pointer lg:py-2 py-1 lg:px-4 px-3.5 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-4xl text-black font-semibold hover:bg-gradient-to-br tracking-wide' onClick={handleSendEmail}>Subscribe</motion.button>
                     ) : (
                         <div>
                             <img className='fixed top-0 left-0 z-40 w-[100vw] h-[100vh] object-none bg-[#1b1b1bb3]' src="Pulse@1x-1.0s-200px-200px.gif" alt="" />
@@ -62,15 +62,15 @@ const Footer = () => {
             </div>
             <hr />
             <div className="lg:flex lg:flex-row flex flex-col items-center justify-center lg:justify-between gap-2 lg:pb-8 pb-6 pt-4">
-                <p>@2025 G Prasant All Rights Reseved.</p>
+                <p className='tracking-wide'>@2025 G Prasant All Rights Reseved.</p>
                 <div className="lg:flex lg:items-center lg:gap-5 text-neutral-300">
-                    <p onClick={() => setOpen(true)} className='mb-1 cursor-pointer'>Terms of Services & Privacy Policy</p>
+                    <p onClick={() => setOpen(true)} className='mb-1 cursor-pointer tracking-wide'>Terms of Services & Privacy Policy</p>
                     <Modal open={open} onClose={() => setOpen(false)}>
                         <div className='bg-neutral-700 lg:w-160 w-90 h-90 overflow-y-auto lg:p-6 p-4 rounded-lg'>
                             <div>
-                                <h1 className='flex items-center justify-center mb-6 text-2xl font-thin'>Term of Services & Privacy Policy</h1>
+                                <h1 className='flex items-center justify-center mb-6 text-2xl font-thin tracking-wider'>Term of Services & Privacy Policy</h1>
                             </div>
-                            <div className=''>
+                            <div className='tracking-wide'>
                                 <h6 className='mb-3 text-sm font-mono'>
                                     Welcome to G Prasant(Portfolio). By accessing or using this Website, you agree to be bound by these Terms of Service. If you do not agree with these Terms, please do not use the Website.</h6>
 
