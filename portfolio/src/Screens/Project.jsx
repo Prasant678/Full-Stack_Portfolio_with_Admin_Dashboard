@@ -4,6 +4,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import logo from "../assets/G.png"
 import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 import { FaSquareXTwitter } from 'react-icons/fa6'
+import { motion } from 'framer-motion';
 
 const Project = () => {
     const [title, setTitle] = useState("");
@@ -73,10 +74,10 @@ const Project = () => {
                     <Link to={user.twitterURL} target='_blank'><FaSquareXTwitter className='cursor-pointer' /></Link>
                 </div>
             </div>
-            <h5 className='flex items-center justify-center text-4xl font-thin llg:my-8 my-7'>{title}</h5>
+            <motion.h5 initial={{ y: -50, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }} className='flex items-center justify-center lg:text-4xl text-xl font-thin lg:my-8 my-7'>{title}</motion.h5>
             <div className="lg:px-10">
                 <div>
-                    <img
+                    <motion.img initial={{ y: 50, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.75 }} 
                         className='rounded-md border-1 border-neutral-700'
                         src={
                             projectBanner
@@ -88,53 +89,53 @@ const Project = () => {
                 </div>
                 <div className="">
                     <div className="my-3">
-                        <p className='text-xl font-thin lg:mb-3 mb-2 tracking-wider'>Description :</p>
-                        <p className='mb-4 text-neutral-400 tracking-wide'>{mainDesc}</p>
+                        <motion.p whileInView={{ opacity: 1, x: 0 }} initial={{ x: -100, opacity: 0 }} transition={{ duration: 0.7, delay: 0.5 }} className='text-xl font-thin lg:mb-3 mb-2 tracking-wider'>Description :</motion.p>
+                        <motion.p whileInView={{ opacity: 1, x: 0 }} initial={{ x: 100, opacity: 0 }} transition={{ duration: 0.7, delay: 0.5 }} className='mb-4 text-neutral-400 tracking-wide'>{mainDesc}</motion.p>
                         {descPoints.length > 0 && (
                             <ul className="pl-0 space-y-1">
                                 {descPoints.map((item, index) => (
-                                    <li key={index} className="flex items-start text-neutral-400 tracking-wide">
+                                    <li  key={index} className="flex items-start text-neutral-400 tracking-wide">
                                         <span className="text-[#00c0c0] mr-1.5 my-[-4px] text-4xl mt-[-8px]">•</span>
-                                        {item.trim()}
+                                        <motion.p whileInView={{ opacity: 1, x: 0 }} initial={{ x: 100, opacity: 0 }} transition={{ duration: 0.7, delay: 0.5 }}>{item.trim()}</motion.p>
                                     </li>
                                 ))}
                             </ul>
                         )}
                     </div>
                     <div className="my-3">
-                        <p className='text-xl font-thin mb-3 tracking-wider'>Technologies :</p>
+                        <motion.p whileInView={{ opacity: 1, x: 0 }} initial={{ x: -100, opacity: 0 }} transition={{ duration: 0.7, delay: 0.6 }} className='text-xl font-thin mb-3 tracking-wider'>Technologies :</motion.p>
                         <ul className='lg:flex flex flex-wrap lg:items-center lg:gap-4 gap-2.5 w-full'>
                             {technologiesList.map((item, index) => (
-                                <li className="lg:mb-0 mb-1 bg-neutral-800 py-1 px-2 rounded text-[#E4A11B] tracking-wide" key={index}>{item}</li>
+                                <motion.li whileInView={{ opacity: 1, x: 0 }} initial={{ x: 100, opacity: 0 }} transition={{ duration: 0.7, delay: 0.6 }} className="lg:mb-0 mb-1 bg-neutral-800 py-1 px-2 rounded text-[#E4A11B] tracking-wide" key={index}>{item}</motion.li>
                             ))}
                         </ul>
                     </div>
                     <div className="my-3">
-                        <h4 className='text-xl font-thin mb-2 tracking-wider'>Stack :</h4>
-                        <p className='font-medium tracking-wider'>{stack}</p>
+                        <motion.h4 whileInView={{ opacity: 1, x: 0 }} initial={{ x: -100, opacity: 0 }} transition={{ duration: 0.7, delay: 0.7 }} className='text-xl font-thin mb-2 tracking-wider'>Stack :</motion.h4>
+                        <motion.p whileInView={{ opacity: 1, x: 0 }} initial={{ x: 100, opacity: 0 }} transition={{ duration: 0.7, delay: 0.7 }} className='font-medium tracking-wider'>{stack}</motion.p>
                     </div>
                     <div className="my-3">
-                        <h4 className='text-xl font-thin mb-2 tracking-wider'>Deployed :</h4>
-                        <p className='font-medium tracking-wider'>{deployed}</p>
+                        <motion.h4 whileInView={{ opacity: 1, x: 0 }} initial={{ x: -100, opacity: 0 }} transition={{ duration: 0.7, delay: 0.8 }} className='text-xl font-thin mb-2 tracking-wider'>Deployed :</motion.h4>
+                        <motion.p whileInView={{ opacity: 1, x: 0 }} initial={{ x: 100, opacity: 0 }} transition={{ duration: 0.7, delay: 0.8 }} className='font-medium tracking-wider'>{deployed}</motion.p>
                     </div>
                     <div className="my-3">
-                        <p className='text-xl font-thin mb-2 tracking-wider'>Github Repository Link :</p>
+                        <motion.p whileInView={{ opacity: 1, x: 0 }} initial={{ x: -100, opacity: 0 }} transition={{ duration: 0.7, delay: 0.9 }} className='text-xl font-thin mb-2 tracking-wider'>Github Repository Link :</motion.p>
                         <Link
                             className='text-[#3B71CA] font-medium break-all underline tracking-wide'
                             target="_blank"
                             to={gitRepoLink}
                         >
-                            {gitRepoLink}
+                            <motion.p whileInView={{ opacity: 1, x: 0 }} initial={{ x: 100, opacity: 0 }} transition={{ duration: 0.7, delay: 0.9 }}>{gitRepoLink}</motion.p>
                         </Link>
                     </div>
                     <div className="my-3 pb-10">
-                        <p className='text-xl font-thin mb-2 tracking-wider'>Project Link :</p>
+                        <motion.p whileInView={{ opacity: 1, x: 0 }} initial={{ x: -100, opacity: 0 }} transition={{ duration: 0.7, delay: 1 }} className='text-xl font-thin mb-2 tracking-wider'>Project Link :</motion.p>
                         <Link
                             className='text-[#3B71CA] font-medium break-all underline tracking-wide'
                             target="_blank"
                             to={projectLink}
                         >
-                            {projectLink}
+                            <motion.p whileInView={{ opacity: 1, x: 0 }} initial={{ x: 100, opacity: 0 }} transition={{ duration: 0.7, delay: 0.9 }}>{projectLink}</motion.p>
                         </Link>
                     </div>
                 </div>
